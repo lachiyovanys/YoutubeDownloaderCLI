@@ -1,5 +1,5 @@
 from simple_term_menu import TerminalMenu
-from pytube import YouTube
+from pytubefix import YouTube
 from tqdm import tqdm
 import time
 import os
@@ -33,7 +33,9 @@ match menu_entries[menu_entry_index]:
 
         url = input("Enter URL: \n> ")
         yt = YouTube(url)
-        format_list=[]
+        format_list=[
+
+        ]
         print(f'Is "{yt.title} by {yt.author}" the video you are looking for ? \n')
         menu_yn = ["Yes", "No"]   
         terminal_menu_yn = TerminalMenu(menu_yn)
